@@ -22,14 +22,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Inherit from Z01R device
 $(call inherit-product, device/asus/Z01R/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common Rising stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# RisingOS Flags
+RISING_MAINTAINER := Pankaj
+RISING_BUILD_TYPE := UNOFFICIAL
+WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
 
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := Z01R
 PRODUCT_MANUFACTURER := asus
 PRODUCT_MODEL := Zenfone 5Z
-PRODUCT_NAME := lineage_Z01R
+PRODUCT_NAME := rising_Z01R
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
@@ -39,6 +47,8 @@ TARGET_VENDOR_DEVICE_NAME := Z01R
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=ASUS_Z01R_1 \
     PRODUCT_NAME=WW_Z01RD \
+    RISING_CHIPSET="Snapdragon®845" \
+    RISING_MAINTAINER="Pankaj" \
     PRIVATE_BUILD_DESC="Z01R-user 8.0.0 OPR1.170623.032 WW_user_80.30.96.221_20181018 release-keys"
 
 BUILD_FINGERPRINT := asus/WW_Z01RD/ASUS_Z01R_1:8.0.0/OPR1.170623.032/WW_80.30.96.221_20181018:user/release-keys
