@@ -22,8 +22,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Inherit from Z01R device
 $(call inherit-product, device/asus/Z01R/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common Matrixx stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Matrixx
+MATRIXX_BUILD_TYPE := Unofficial
+MATRIXX_MAINTAINER := Pankaj
+MATRIXX_CHIPSET := Snapdragon®845
+MATRIXX_BATTERY := 3300mAh
+MATRIXX_DISPLAY := 1080X2246
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := Z01R
