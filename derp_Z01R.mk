@@ -28,6 +28,7 @@ $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 # DerpFest
 DERP_BUILDTYPE := UNOFFICIAL
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_USES_PICO_GAPPS := true
 
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := Z01R
