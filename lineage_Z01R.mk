@@ -22,8 +22,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Inherit from Z01R device
 $(call inherit-product, device/asus/Z01R/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common Evolution stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# EvolutionX Flags
+EVO_BUILD_TYPE := UNOFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# EvolutionX GApps
+TARGET_GAPPS_ARCH := arm64
+TARGET_USES_PICO_GAPPS := true
 
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := Z01R
